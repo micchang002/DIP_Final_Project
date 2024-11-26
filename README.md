@@ -20,3 +20,5 @@ DIP_Final_Project/
 
 ## Reference
 1. Shih, Kuang-Tsu, and Chen, Homer H. "Exploiting Perceptual Anchoring for Color Image Enhancement." *IEEE Transactions on Multimedia*, vol. 18, no. 2, 2016, pp. 300-310. DOI: [10.1109/TMM.2015.2503918](https://doi.org/10.1109/TMM.2015.2503918).
+2. [Colour Science GitHub](https://github.com/colour-science/colour)
+
