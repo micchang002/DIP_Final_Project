@@ -42,23 +42,21 @@ class ColorSpaceConverter:
         """Convert linear RGB to XYZ color space"""
         pixels = rgb_linear.reshape(-1, 3)
         xyz_pixels = np.dot(pixels, self.M_f.T)
+        print(f'xyz_pixels: {xyz_pixels.shape}')
         return xyz_pixels.reshape(rgb_linear.shape)
 
     def convert_image_to_xyz(self, image_path):
         """Main method to convert image from BGR to XYZ"""
         # Load image
         bgr_image = self.load_image(image_path)
-
         # Convert to RGB and normalize
         rgb_image = self.bgr_to_rgb(bgr_image)
-
         # Apply gamma correction
         rgb_linear = self.apply_gamma_correction(rgb_image)
-
         # Convert to XYZ
         xyz = self.convert_to_xyz(rgb_linear)
         # print(xyz)
-        return xyz
+        return xyz, rgb_image
 
 
 # Example usage:

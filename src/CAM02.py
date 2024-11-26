@@ -2,7 +2,7 @@ import numpy as np
 import colour
 
 class CIECAM02Converter:
-    def __init__(self, XYZ_w=None, L_A=60, Y_b=25):
+    def __init__(self, XYZ_w=None, L_A=63, Y_b=25):
         """
         Initialize the CIECAM02Converter class with default or custom parameters.
 
@@ -40,7 +40,7 @@ class CIECAM02Converter:
         # i = 0
         # Process each pixel in the XYZ image
         for i in range(H):
-            print(i)
+            # print(i)
             for j in range(W):
                 sample_XYZ = XYZ_image[i, j, :]
                 cam02_result = colour.XYZ_to_CIECAM02(
@@ -55,8 +55,7 @@ class CIECAM02Converter:
                 J_image[i, j] = cam02_result.J  # Lightness
                 C_image[i, j] = cam02_result.C  # Chroma
                 H_image[i, j] = cam02_result.h  # Hue angle
-            i += 1
-
+            # i += 1
         return {"Lightness (J)": J_image, "Chroma (C)": C_image, "Hue (H)": H_image}
 
     def invert_image(self, J, C, K):
@@ -71,7 +70,6 @@ class CIECAM02Converter:
         Returns:
         - A 3D NumPy array of shape (H, W, 3) representing the XYZ values of the image.
         """
-        import colour  # Ensure the correct namespace is available
         H, W = J.shape
 
         # Initialize empty array for XYZ values
@@ -94,7 +92,7 @@ class CIECAM02Converter:
                     self.surround
                 )
 
-        return XYZ_image
+        return XYZ_image, J, C
 
 
 # Example usage:
