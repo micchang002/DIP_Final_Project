@@ -1,5 +1,6 @@
 # DIP_Final_Project
 ## Prograss
+- [x] implementation  
 - [ ] baseline compare 12/05
 - [ ] ppt 12/12
 - [ ] report 12/
