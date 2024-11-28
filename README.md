@@ -1,8 +1,8 @@
 # DIP_Final_Project
 ## Prograss
-- [ ] baseline compare
-- [ ] ppt
-- [ ] report
+- [ ] baseline compare 12/05
+- [ ] ppt 12/12
+- [ ] report 12/
 
 ## Problem
 What is the range of JC (0-1)?
