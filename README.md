@@ -1,4 +1,9 @@
 # DIP_Final_Project
+## Prograss
+- [ ] baseline compare
+- [ ] ppt
+- [ ] report
+
 ## Problem
 What is the range of JC (0-1)?
 (1-JC) * clipped_rgb + JC * original_rgb
